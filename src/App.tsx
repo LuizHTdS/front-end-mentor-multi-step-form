@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CurrentStepCard } from './components/CurrentStepCard';
 import { PersonalInfo } from './components/PersonalInfo';
+import ChangeStepButton from './components/ChangeStepBtn';
 interface Info {
   name: string;
   email: string;
@@ -74,6 +75,13 @@ export default function App() {
       //   : curStep === 3 ? <AddOns formData={formData} setFormData={setFormData} />
       //     : curStep === 4 ? <Summary formData={formData} setFormData={setFormData} />
       null}
+      <div className='buttonField'>
+        <ChangeStepButton
+          action='forward'
+          curStep={curStep}
+          setCurStep={setCurStep}
+        />
+      </div>
     </form>
   );
 }

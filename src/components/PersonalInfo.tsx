@@ -1,5 +1,3 @@
-import ChangeStepButton from './ChangeStepBtn';
-
 export type FormProps = {
   formData: any;
   setFormData: any;
@@ -48,11 +46,6 @@ export const PersonalInfo = (props: FormProps) => {
           />
         </div>
       </div>
-      <ChangeStepButton
-        action='forward'
-        curStep={props.curStep}
-        setCurStep={props.setCurStep}
-      />
     </section>
   );
 };
