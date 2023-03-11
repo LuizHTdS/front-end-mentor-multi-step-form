@@ -1,8 +1,6 @@
 export type FormProps = {
   formData: any;
   setFormData: any;
-  curStep: number;
-  setCurStep: React.Dispatch<number>;
   handleChange: (e: any) => void;
 };
 

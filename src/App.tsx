@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CurrentStepCard } from './components/CurrentStepCard';
 import { PersonalInfo } from './components/PersonalInfo';
+import { SelectPlan } from './components/SelectPlan';
 import ChangeStepButton from './components/ChangeStepBtn';
 interface Info {
   name: string;
@@ -8,8 +9,8 @@ interface Info {
   phone: number | string;
 }
 interface Plan {
-  package: 'Arcade' | 'Advanced' | 'Pro';
-  frequency: 'Monthly' | 'Yearly';
+  package: 'arcade' | 'advanced' | 'pro';
+  isYearly: boolean;
 }
 
 interface AddOns {
@@ -31,8 +32,8 @@ export default function App() {
       phone: '',
     },
     plan: {
-      package: 'Arcade',
-      frequency: 'Monthly',
+      package: 'arcade',
+      isYearly: false,
     },
     addOns: {
       onlineService: false,
@@ -42,8 +43,10 @@ export default function App() {
   });
 
   const handleChange = (e: any) => {
-    const { name } = e.target;
+    const { name, type, checked } = e.target;
     let { value } = e.target;
+    value = type === 'checkbox' ? checked : value;
+    console.log(name);
     if (name === 'phone') {
       value = value.replace(/\D/g, '');
     }
@@ -56,9 +59,58 @@ export default function App() {
         },
       }));
     }
+    if (curStep === 2) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        plan: {
+          ...formData.plan,
+          [name]: value,
+        },
+      }));
+    }
+
+    console.log(formData);
   };
 
   const [curStep, setCurStep] = React.useState(1);
+
+  function placeButtons() {
+    if (curStep === 1) {
+      return (
+        <ChangeStepButton
+          action='forward'
+          curStep={curStep}
+          setCurStep={setCurStep}
+        />
+      );
+    } else if (curStep > 1 && curStep < 4) {
+      return (
+        <>
+          <ChangeStepButton
+            curStep={curStep}
+            setCurStep={setCurStep}
+            action='back'
+          />
+          <ChangeStepButton
+            curStep={curStep}
+            setCurStep={setCurStep}
+            action='forward'
+          />
+        </>
+      );
+    } else if (curStep === 4) {
+      return (
+        <>
+          <ChangeStepButton
+            curStep={curStep}
+            setCurStep={setCurStep}
+            action='back'
+          />
+          <button>Confirm</button>
+        </>
+      );
+    }
+  }
 
   return (
     <form>
@@ -67,21 +119,20 @@ export default function App() {
         <PersonalInfo
           formData={formData}
           setFormData={setFormData}
-          curStep={curStep}
-          setCurStep={setCurStep}
           handleChange={handleChange}
         />
-      ) : // : curStep === 2 ? <SelectPlan formData={formData} setFormData={setFormData} />
-      //   : curStep === 3 ? <AddOns formData={formData} setFormData={setFormData} />
-      //     : curStep === 4 ? <Summary formData={formData} setFormData={setFormData} />
-      null}
-      <div className='buttonField'>
-        <ChangeStepButton
-          action='forward'
-          curStep={curStep}
-          setCurStep={setCurStep}
+      ) : curStep === 2 ? (
+        <SelectPlan
+          formData={formData}
+          setFormData={setFormData}
+          handleChange={handleChange}
         />
-      </div>
+      ) : (
+        // : curStep === 3 ? <AddOns formData={formData} setFormData={setFormData} />
+        //     : curStep === 4 ? <Summary formData={formData} setFormData={setFormData} />
+        <h1>error</h1>
+      )}
+      <div className='buttonField'>{placeButtons()}</div>
     </form>
   );
 }

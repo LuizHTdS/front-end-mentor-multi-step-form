@@ -1,18 +1,36 @@
-import ChangeStepButton from "./ChangeStepBtn";
-import { FormProps } from './PersonalInfo'
+import { FormProps } from './PersonalInfo';
+import { PlanCard } from './PlanCard';
 
-export const SelectPlan: React.FC<FormProps> = () => {
-    return <section className="selectPlan">
-        <div className="selectPlan__heading">
-            <h1>
-                Select your plan
-            </h1>
-            <h2>You have the option of monthly or yearly billing</h2>
-        </div>
-        <div className="selectPlan__billing">
+const plans = ['arcade', 'advanced', 'pro'];
 
-        </div>
+export const SelectPlan = (props: FormProps) => {
+  const planCardEl = plans.map((plan) => {
+    return (
+      <PlanCard
+        formData={props.formData}
+        plan={plan}
+        key={plan}
+        setFormData={props.setFormData}
+      />
+    );
+  });
 
-
+  return (
+    <section className='selectPlan'>
+      <div className='selectPlan__heading'>
+        <h1>Select your plan</h1>
+        <h2>You have the option of monthly or yearly billing</h2>
+      </div>
+      <div className='selectPlan__billing'>{planCardEl}</div>
+      <label className='switch'>
+        <input
+          type='checkbox'
+          name='isYearly'
+          checked={props.formData.plan.frequency}
+          onChange={props.handleChange}
+        />
+        <span className='slider'></span>
+      </label>
     </section>
-}
+  );
+};
