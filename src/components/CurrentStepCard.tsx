@@ -2,6 +2,7 @@ import { Step } from "./Step";
 
 type Props = {
     curStep: number;
+    setCurStep: React.Dispatch<number>;
 }
 
 
