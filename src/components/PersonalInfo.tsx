@@ -41,6 +41,7 @@ export const PersonalInfo = (props: FormProps) => {
           <input
             type='text'
             name='phone'
+            pattern='[0-9]*'
             placeholder='e.g. +1 234 567 890'
             value={props.formData.info.phone}
             onChange={props.handleChange}

@@ -41,10 +41,12 @@ export default function App() {
   });
 
   const handleChange = (e: any) => {
-    const { name, value } = e.target;
-
+    const { name } = e.target;
+    let { value } = e.target;
+    if (name === 'phone') {
+      value = value.replace(/\D/g, '');
+    }
     if (curStep === 1) {
-      const info = formData.info;
       setFormData((prevFormData) => ({
         ...prevFormData,
         info: {
