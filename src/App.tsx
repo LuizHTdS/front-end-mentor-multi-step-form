@@ -3,6 +3,7 @@ import { CurrentStepCard } from './components/CurrentStepCard';
 import { PersonalInfo } from './components/PersonalInfo';
 import { SelectPlan } from './components/SelectPlan';
 import { AddOns } from './components/AddOns';
+import { Summary } from './components/Summary';
 import ChangeStepButton from './components/ChangeStepBtn';
 interface Info {
   name: string;
@@ -140,8 +141,14 @@ export default function App() {
           setFormData={setFormData}
           handleChange={handleChange}
         />
+      ) : curStep === 4 ? (
+        <Summary
+          formData={formData}
+          setFormData={setFormData}
+          handleChange={setCurStep}
+          setCurStep={setCurStep}
+        />
       ) : (
-        //     : curStep === 4 ? <Summary formData={formData} setFormData={setFormData} />
         <h1>error</h1>
       )}
       <div className='buttonField'>{placeButtons()}</div>
