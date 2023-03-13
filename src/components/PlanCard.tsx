@@ -33,7 +33,7 @@ export const PlanCard = (props: CardProps) => {
       }}
     >
       <img
-        src={`../public/images/icon-${props.plan}`}
+        src={`../images/icon-${props.plan}.svg`}
         alt={`icon for the ${props.plan} plan`}
       />
       <h3>{capitalizedPlan}</h3>

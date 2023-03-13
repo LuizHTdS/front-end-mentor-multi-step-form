@@ -22,15 +22,21 @@ export const SelectPlan = (props: FormProps) => {
         <h2>You have the option of monthly or yearly billing</h2>
       </div>
       <div className='selectPlan__billing'>{planCardEl}</div>
-      <label className='switch'>
-        <input
-          type='checkbox'
-          name='isYearly'
-          checked={props.formData.plan.frequency}
-          onChange={props.handleChange}
-        />
-        <span className='slider'></span>
-      </label>
+      <div className='selectPlan__frequency'>
+        <h3 className={props.formData.plan.isYearly ? '' : 'active'}>
+          Monthly
+        </h3>
+        <label className='switch'>
+          <input
+            type='checkbox'
+            name='isYearly'
+            checked={props.formData.plan.isYearly}
+            onChange={props.handleChange}
+          />
+          <span className='slider'></span>
+        </label>
+        <h3 className={props.formData.plan.isYearly ? 'active' : ''}>Yearly</h3>
+      </div>
     </section>
   );
 };
