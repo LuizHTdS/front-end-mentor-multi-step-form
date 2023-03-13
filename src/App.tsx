@@ -114,7 +114,11 @@ export default function App() {
             setCurStep={setCurStep}
             action='back'
           />
-          <button>Confirm</button>
+          <ChangeStepButton
+            curStep={curStep}
+            setCurStep={setCurStep}
+            action='submit'
+          />
         </>
       );
     }
