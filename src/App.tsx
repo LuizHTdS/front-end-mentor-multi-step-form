@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CurrentStepCard } from './components/CurrentStepCard';
 import { PersonalInfo } from './components/PersonalInfo';
 import { SelectPlan } from './components/SelectPlan';
+import { AddOns } from './components/AddOns';
 import ChangeStepButton from './components/ChangeStepBtn';
 interface Info {
   name: string;
@@ -58,8 +59,7 @@ export default function App() {
           [name]: value,
         },
       }));
-    }
-    if (curStep === 2) {
+    } else if (curStep === 2) {
       setFormData((prevFormData) => ({
         ...prevFormData,
         plan: {
@@ -67,8 +67,15 @@ export default function App() {
           [name]: value,
         },
       }));
+    } else if (curStep === 3) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        addOns: {
+          ...formData.addOns,
+          [name]: value,
+        },
+      }));
     }
-
     console.log(formData);
   };
 
@@ -127,8 +134,13 @@ export default function App() {
           setFormData={setFormData}
           handleChange={handleChange}
         />
+      ) : curStep === 3 ? (
+        <AddOns
+          formData={formData}
+          setFormData={setFormData}
+          handleChange={handleChange}
+        />
       ) : (
-        // : curStep === 3 ? <AddOns formData={formData} setFormData={setFormData} />
         //     : curStep === 4 ? <Summary formData={formData} setFormData={setFormData} />
         <h1>error</h1>
       )}
