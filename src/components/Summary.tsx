@@ -68,25 +68,25 @@ const Summary = (props: SummaryProps) => {
             {props.formData.addOns.onlineService && (
               <div className='summary__info--addOn-item'>
                 <p>Online service</p>
-                <h2>
+                <h4>
                   +${props.formData.plan.isYearly ? 10 : 1}/{frequency}
-                </h2>
+                </h4>
               </div>
             )}
             {props.formData.addOns.largerStorage && (
               <div className='summary__info--addOn-item'>
                 <p>Larger storage</p>
-                <h2>
+                <h4>
                   +${props.formData.plan.isYearly ? 20 : 2}/{frequency}
-                </h2>
+                </h4>
               </div>
             )}
             {props.formData.addOns.customProfile && (
               <div className='summary__info--addOn-item'>
                 <p>Custom profile</p>
-                <h2>
+                <h4>
                   +${props.formData.plan.isYearly ? 20 : 2}/{frequency}
-                </h2>
+                </h4>
               </div>
             )}
           </div>

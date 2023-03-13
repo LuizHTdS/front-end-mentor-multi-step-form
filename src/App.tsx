@@ -5,6 +5,7 @@ import { SelectPlan } from './components/SelectPlan';
 import { AddOns } from './components/AddOns';
 import { Summary } from './components/Summary';
 import ChangeStepButton from './components/ChangeStepBtn';
+import { Submitted } from './components/Submitted';
 interface Info {
   name: string;
   email: string;
@@ -152,8 +153,10 @@ export default function App() {
           handleChange={setCurStep}
           setCurStep={setCurStep}
         />
+      ) : curStep === 5 ? (
+        <Submitted />
       ) : (
-        <h1>error</h1>
+        <h1>error loading next step</h1>
       )}
       <div className='buttonField'>{placeButtons()}</div>
     </form>
