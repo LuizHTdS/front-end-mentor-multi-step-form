@@ -128,37 +128,39 @@ export default function App() {
   return (
     <form>
       <CurrentStepCard curStep={curStep} setCurStep={setCurStep} />
-      {curStep === 1 ? (
-        <PersonalInfo
-          formData={formData}
-          setFormData={setFormData}
-          handleChange={handleChange}
-        />
-      ) : curStep === 2 ? (
-        <SelectPlan
-          formData={formData}
-          setFormData={setFormData}
-          handleChange={handleChange}
-        />
-      ) : curStep === 3 ? (
-        <AddOns
-          formData={formData}
-          setFormData={setFormData}
-          handleChange={handleChange}
-        />
-      ) : curStep === 4 ? (
-        <Summary
-          formData={formData}
-          setFormData={setFormData}
-          handleChange={setCurStep}
-          setCurStep={setCurStep}
-        />
-      ) : curStep === 5 ? (
-        <Submitted />
-      ) : (
-        <h1>error loading next step</h1>
-      )}
-      <div className='buttonField'>{placeButtons()}</div>
+      <div className='formInfo'>
+        {curStep === 1 ? (
+          <PersonalInfo
+            formData={formData}
+            setFormData={setFormData}
+            handleChange={handleChange}
+          />
+        ) : curStep === 2 ? (
+          <SelectPlan
+            formData={formData}
+            setFormData={setFormData}
+            handleChange={handleChange}
+          />
+        ) : curStep === 3 ? (
+          <AddOns
+            formData={formData}
+            setFormData={setFormData}
+            handleChange={handleChange}
+          />
+        ) : curStep === 4 ? (
+          <Summary
+            formData={formData}
+            setFormData={setFormData}
+            handleChange={setCurStep}
+            setCurStep={setCurStep}
+          />
+        ) : curStep === 5 ? (
+          <Submitted />
+        ) : (
+          <h1>error loading next step</h1>
+        )}
+        <div className='buttonField'>{placeButtons()}</div>
+      </div>
     </form>
   );
 }

@@ -1,0 +1,35 @@
+@use '../abstracts/' as *;
+
+.personalInfo {
+  margin-top: 5.5rem;
+
+  &__heading {
+    margin-bottom: 3rem;
+  }
+  h1 {
+    font-size: 3.6rem;
+    color: lighten($marine-blue, $amount: 7%);
+  }
+
+  h2 {
+    color: $cool-gray;
+    font-weight: 400;
+  }
+
+  &__form--inputBox {
+    label {
+      font-size: 1.3rem;
+      display: block;
+      color: lighten($marine-blue, $amount: 7%);
+      margin-bottom: 0.5rem;
+    }
+    input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.5rem;
+      border: 0.1rem solid $cool-gray;
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
