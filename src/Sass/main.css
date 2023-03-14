@@ -286,10 +286,26 @@ form {
   border-radius: 1rem;
   margin-bottom: 2rem;
 }
-.addOns_services--addOn input:checked {
-  background-color: hsl(213, 96%, 18%);
+.addOns_services--addOn h3 {
+  font-size: 1.6rem;
   color: hsl(213, 96%, 18%);
-  padding: 2rem;
+}
+.addOns_services--addOn p {
+  color: hsl(231, 11%, 63%);
+  font-size: 1.2rem;
+}
+.addOns_services--addOn input {
+  margin-right: 2rem;
+  accent-color: hsl(213, 96%, 18%);
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.addOns_services--addOn h4 {
+  margin-left: auto;
+  color: hsl(231, 11%, 63%);
+  font-weight: 700;
+  margin-right: 1rem;
+  font-size: 1.2rem;
 }
 
 .buttonField {
