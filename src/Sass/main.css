@@ -275,6 +275,7 @@ form {
   color: white;
   font-size: 1.75rem;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .btn__forward {
