@@ -37,7 +37,9 @@ export const PlanCard = (props: CardProps) => {
         alt={`icon for the ${props.plan} plan`}
       />
       <h3>{capitalizedPlan}</h3>
-      <h4>{price}</h4>
+      <h4>
+        ${price}/{props.formData.plan.isYearly ? 'yr' : 'mo'}
+      </h4>
     </div>
   );
 };

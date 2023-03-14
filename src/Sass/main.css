@@ -81,7 +81,7 @@ html {
   background-image: url("./public/images/bg-sidebar-desktop.svg");
   background-repeat: no-repeat;
   background-size: 42rem;
-  height: 100vh;
+  height: 98vh;
   width: 42rem;
   padding: 5rem 3rem;
   margin-right: 10rem;
@@ -124,7 +124,9 @@ form {
 }
 
 .formInfo {
-  width: 65%;
+  width: 120rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .personalInfo {
@@ -148,10 +150,137 @@ form {
   margin-bottom: 0.5rem;
 }
 .personalInfo__form--inputBox input {
-  width: 100%;
+  width: 120rem;
   padding: 1rem;
   font-size: 1.5rem;
   border: 0.1rem solid hsl(231, 11%, 63%);
   border-radius: 0.5rem;
   margin-bottom: 2.5rem;
+}
+
+.selectPlan {
+  margin-top: 5.5rem;
+  width: 120rem;
+  /* Hide default HTML checkbox */
+  /* The slider */
+}
+.selectPlan__heading {
+  margin-bottom: 6rem;
+}
+.selectPlan__heading h1 {
+  font-size: 3.6rem;
+  color: #033a7d;
+}
+.selectPlan__heading h2 {
+  color: hsl(231, 11%, 63%);
+  font-weight: 400;
+}
+.selectPlan__billing {
+  display: flex;
+}
+.selectPlan__billing .selected {
+  background-color: hsla(228, 100%, 84%, 0.144);
+  border: 0.1rem solid hsl(243, 100%, 62%);
+}
+.selectPlan__billing--card {
+  padding: 2rem;
+  width: 20rem;
+  height: 22.5rem;
+  border: 0.1rem solid hsl(231, 11%, 63%);
+  border-radius: 1rem;
+  margin-right: 4rem;
+  cursor: pointer;
+}
+.selectPlan__billing--card:hover {
+  border: 0.1rem solid hsl(243, 100%, 62%);
+}
+.selectPlan__billing--card h3 {
+  font-size: 2.5rem;
+}
+.selectPlan__billing--card h4 {
+  margin-top: 0.5rem;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: hsl(231, 11%, 63%);
+}
+.selectPlan__billing--card img {
+  margin: 0 0 6rem 0;
+}
+.selectPlan__frequency {
+  display: flex;
+  margin-top: 5rem;
+  background-color: hsl(231, 100%, 99%);
+  border-radius: 1rem;
+  padding: 1.5rem 3rem;
+  justify-content: center;
+}
+.selectPlan__frequency h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.selectPlan__frequency .active {
+  color: #03418c;
+}
+.selectPlan .switch {
+  margin: 0 2rem 0 2rem;
+  position: relative;
+  display: inline-block;
+  width: 5.8rem;
+  height: 3rem;
+}
+.selectPlan .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.selectPlan .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  transition: 0.4s;
+  border-radius: 19rem;
+}
+.selectPlan .slider:before {
+  position: absolute;
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  left: 0.4rem;
+  bottom: 0.5rem;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 10rem;
+}
+.selectPlan input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+.selectPlan input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.buttonField {
+  display: flex;
+  flex-basis: 100%;
+  align-self: flex-end;
+}
+.buttonField button {
+  background-color: hsl(213, 96%, 18%);
+  border: none;
+  padding: 1.75rem 3.5rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.btn__forward {
+  margin-left: auto;
+}
+
+.btn__submit {
+  margin-left: auto;
 }/*# sourceMappingURL=main.css.map */

@@ -4,7 +4,7 @@
   background-image: url('./public/images/bg-sidebar-desktop.svg');
   background-repeat: no-repeat;
   background-size: 42rem;
-  height: 100vh;
+  height: 98vh;
   width: 42rem;
   padding: 5rem 3rem;
   margin-right: 10rem;
@@ -47,5 +47,7 @@ form {
 }
 
 .formInfo {
-  width: 65%;
+  width: 120rem;
+  display: flex;
+  flex-wrap: wrap;
 }

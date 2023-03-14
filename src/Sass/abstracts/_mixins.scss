@@ -1,0 +1,16 @@
+@mixin heading-styling {
+  margin-top: 5.5rem;
+
+  &__heading {
+    margin-bottom: 3rem;
+  }
+  h1 {
+    font-size: 3.6rem;
+    color: lighten($marine-blue, $amount: 7%);
+  }
+
+  h2 {
+    color: $cool-gray;
+    font-weight: 400;
+  }
+}

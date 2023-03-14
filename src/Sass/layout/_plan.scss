@@ -1,0 +1,119 @@
+@use '../abstracts/' as *;
+
+.selectPlan {
+  margin-top: 5.5rem;
+  width: 120rem;
+  &__heading {
+    margin-bottom: 6rem;
+
+    h1 {
+      font-size: 3.6rem;
+      color: lighten($marine-blue, $amount: 7%);
+    }
+
+    h2 {
+      color: $cool-gray;
+      font-weight: 400;
+    }
+  }
+  &__billing {
+    display: flex;
+    .selected {
+      background-color: hsla(228, 100%, 84%, 0.144);
+      border: 0.1rem solid $purplish-blue;
+    }
+    &--card {
+      padding: 2rem;
+      width: 20rem;
+      height: 22.5rem;
+      border: 0.1rem solid $cool-gray;
+      border-radius: 1rem;
+      margin-right: 4rem;
+      cursor: pointer;
+
+      &:hover {
+        border: 0.1rem solid $purplish-blue;
+      }
+      h3 {
+        font-size: 2.5rem;
+      }
+      h4 {
+        margin-top: 0.5rem;
+        font-size: 1.9rem;
+        font-weight: 400;
+        color: $cool-gray;
+      }
+      img {
+        margin: 0 0 6rem 0;
+      }
+    }
+  }
+  &__frequency {
+    display: flex;
+    margin-top: 5rem;
+    background-color: $alabaster;
+    border-radius: 1rem;
+    padding: 1.5rem 3rem;
+    justify-content: center;
+    h3 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+    .active {
+      color: lighten($color: $marine-blue, $amount: 10);
+    }
+  }
+
+  //   Slider code from W3 Schools
+  .switch {
+    margin: 0 2rem 0 2rem;
+    position: relative;
+    display: inline-block;
+    width: 5.8rem;
+    height: 3rem;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $marine-blue;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 19rem;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 2rem;
+    width: 2rem;
+    left: 0.4rem;
+    bottom: 0.5rem;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 10rem;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+}
