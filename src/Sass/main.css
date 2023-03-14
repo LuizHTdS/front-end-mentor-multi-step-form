@@ -311,6 +311,29 @@ form {
   background-color: rgba(173, 190, 255, 0.1);
 }
 
+.summary {
+  margin-top: 5.5rem;
+}
+.summary__heading {
+  margin-bottom: 3rem;
+}
+.summary h1 {
+  font-size: 3.6rem;
+  color: #033a7d;
+}
+.summary h2 {
+  color: hsl(231, 11%, 63%);
+  font-weight: 400;
+}
+.summary__info--plan-package {
+  display: flex;
+  padding: 1rem;
+  background-color: rgba(191, 226, 253, 0.2);
+}
+.summary__info--plan h4 {
+  margin-left: auto;
+}
+
 .buttonField {
   display: flex;
   flex-basis: 100%;

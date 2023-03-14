@@ -61,10 +61,16 @@ const Summary = (props: SummaryProps) => {
       <div className='summary__info'>
         <div className='summary__info--plan'>
           <div className='summary__info--plan-package'>
-            <h3>{props.formData.plan.package}</h3>
-            <p id='changePlan' onClick={() => props.setCurStep(2)}>
-              Change
-            </p>
+            <div className='plan__container'>
+              <h3>
+                {props.formData.plan.package[0].toUpperCase() +
+                  props.formData.plan.package.slice(1)}{' '}
+                ({props.formData.plan.isYearly ? 'Yearly' : 'Monthly'})
+              </h3>
+              <p id='changePlan' onClick={() => props.setCurStep(2)}>
+                Change
+              </p>
+            </div>
             <h4>{getPlanPrice()}</h4>
           </div>
           <div className='summary__info--addOn'>
