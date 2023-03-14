@@ -6,20 +6,31 @@
   align-self: flex-end;
 
   button {
-    background-color: $marine-blue;
     border: none;
     padding: 1.75rem 3.5rem;
     border-radius: 1rem;
-    color: white;
     font-size: 1.75rem;
     font-weight: 500;
     cursor: pointer;
   }
 }
 .btn__forward {
+  color: white;
+  background-color: $marine-blue;
   margin-left: auto;
 }
 
 .btn__submit {
+  color: white;
+  background-color: $marine-blue;
   margin-left: auto;
+}
+
+.btn__back {
+  color: $cool-gray;
+  background-color: transparent;
+
+  &:hover {
+    color: $purplish-blue;
+  }
 }

@@ -268,20 +268,30 @@ form {
   align-self: flex-end;
 }
 .buttonField button {
-  background-color: hsl(213, 96%, 18%);
   border: none;
   padding: 1.75rem 3.5rem;
   border-radius: 1rem;
-  color: white;
   font-size: 1.75rem;
   font-weight: 500;
   cursor: pointer;
 }
 
 .btn__forward {
+  color: white;
+  background-color: hsl(213, 96%, 18%);
   margin-left: auto;
 }
 
 .btn__submit {
+  color: white;
+  background-color: hsl(213, 96%, 18%);
   margin-left: auto;
+}
+
+.btn__back {
+  color: hsl(231, 11%, 63%);
+  background-color: transparent;
+}
+.btn__back:hover {
+  color: hsl(243, 100%, 62%);
 }/*# sourceMappingURL=main.css.map */
