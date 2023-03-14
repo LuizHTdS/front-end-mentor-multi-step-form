@@ -19,7 +19,7 @@ const Summary = (props: SummaryProps) => {
       return `$${planPrice}/${frequency}`;
     }
   }
-
+  let totalPrice: number;
   function getTotalPrice() {
     if (
       !props.formData.addOns.onlineService &&
@@ -28,17 +28,20 @@ const Summary = (props: SummaryProps) => {
     ) {
       return planPrice;
     }
-    let totalPrice = planPrice;
+
+    totalPrice = planPrice;
 
     if (props.formData.addOns.onlineService) {
       props.formData.plan.isYearly
         ? (totalPrice = totalPrice + 10)
         : (totalPrice = totalPrice + 1);
-    } else if (props.formData.addOns.largerStorage) {
+    }
+    if (props.formData.addOns.largerStorage) {
       props.formData.plan.isYearly
         ? (totalPrice = totalPrice + 20)
         : (totalPrice = totalPrice + 2);
-    } else if (props.formData.addOns.customProfile) {
+    }
+    if (props.formData.addOns.customProfile) {
       props.formData.plan.isYearly
         ? (totalPrice = totalPrice + 20)
         : (totalPrice = totalPrice + 2);

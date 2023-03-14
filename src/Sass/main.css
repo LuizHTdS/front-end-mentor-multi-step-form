@@ -262,6 +262,36 @@ form {
   transform: translateX(26px);
 }
 
+.addOns {
+  margin-top: 5.5rem;
+  width: 120rem;
+}
+.addOns__heading {
+  margin-bottom: 3rem;
+}
+.addOns h1 {
+  font-size: 3.6rem;
+  color: #033a7d;
+}
+.addOns h2 {
+  color: hsl(231, 11%, 63%);
+  font-weight: 400;
+}
+.addOns_services--addOn {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  background-color: rgba(173, 190, 255, 0.1);
+  border: 0.1rem solid hsl(243, 100%, 62%);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.addOns_services--addOn input:checked {
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(213, 96%, 18%);
+  padding: 2rem;
+}
+
 .buttonField {
   display: flex;
   flex-basis: 100%;
