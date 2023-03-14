@@ -8,7 +8,11 @@ const AddOns = (props: FormProps) => {
         <h2>Add-ons help enhance your gaming experience.</h2>
       </div>
       <div className='addOns__services'>
-        <div className='addOns_services--addOn'>
+        <div
+          className={`addOns_services--addOn ${
+            props.formData.addOns.onlineService ? 'selected' : ''
+          }`}
+        >
           <input
             type='checkbox'
             name='onlineService'
@@ -23,7 +27,11 @@ const AddOns = (props: FormProps) => {
             +{props.formData.plan.isYearly === false ? '$1/mo' : '$10/yr'}
           </h4>
         </div>
-        <div className='addOns_services--addOn'>
+        <div
+          className={`addOns_services--addOn ${
+            props.formData.addOns.largerStorage ? 'selected' : ''
+          }`}
+        >
           <input
             type='checkbox'
             name='largerStorage'
@@ -38,7 +46,11 @@ const AddOns = (props: FormProps) => {
             +{props.formData.plan.isYearly === false ? '$2/mo' : '$20/yr'}
           </h4>
         </div>
-        <div className='addOns_services--addOn'>
+        <div
+          className={`addOns_services--addOn ${
+            props.formData.addOns.customProfile ? 'selected' : ''
+          }`}
+        >
           <input
             type='checkbox'
             name='customProfile'

@@ -22,7 +22,6 @@
       padding: 1.5rem;
       display: flex;
       align-items: center;
-      background-color: transparentize($pastel-blue, 0.9);
       border: 0.1rem solid $purplish-blue;
       border-radius: 1rem;
       margin-bottom: 2rem;
@@ -53,4 +52,8 @@
       }
     }
   }
+}
+
+.addOns_services--addOn.selected {
+  background-color: transparentize($pastel-blue, 0.9);
 }
