@@ -313,6 +313,7 @@ form {
 
 .summary {
   margin-top: 5.5rem;
+  width: 120rem;
 }
 .summary__heading {
   margin-bottom: 3rem;
@@ -327,11 +328,67 @@ form {
 }
 .summary__info--plan-package {
   display: flex;
-  padding: 1rem;
+  padding: 1.5rem;
+  align-items: center;
   background-color: rgba(191, 226, 253, 0.2);
+}
+.summary__info--plan-package h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.summary__info--plan-package p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: hsl(231, 11%, 63%);
+  cursor: pointer;
+}
+.summary__info--plan-package p:hover {
+  color: hsl(243, 100%, 62%);
+  text-decoration: underline;
 }
 .summary__info--plan h4 {
   margin-left: auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: hsl(213, 96%, 18%);
+}
+.summary__info--addOn {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  background-color: rgba(191, 226, 253, 0.2);
+}
+.summary__info--addOn::before {
+  content: "";
+  width: 117rem;
+  background-color: rgba(150, 153, 171, 0.4);
+  height: 0.1rem;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+.summary__info--addOn-item {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+.summary__info--addOn-item h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.summary__info--addOn-item p {
+  font-size: 1.5rem;
+  color: hsl(231, 11%, 63%);
+}
+.summary__info--total {
+  display: flex;
+  margin-top: 3rem;
+  padding: 0 1.5rem 0 1.5rem;
+}
+.summary__info--total p {
+  color: hsl(231, 11%, 63%);
+  font-size: 1.5rem;
+}
+.summary__info--total h3 {
+  margin-left: auto;
+  font-size: 1.8rem;
+  color: hsl(243, 100%, 62%);
 }
 
 .buttonField {

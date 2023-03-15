@@ -1,6 +1,7 @@
 @use '../abstracts/' as *;
 .summary {
   margin-top: 5.5rem;
+  width: 120rem;
   &__heading {
     margin-bottom: 3rem;
   }
@@ -18,11 +19,67 @@
     &--plan {
       &-package {
         display: flex;
-        padding: 1rem;
+        padding: 1.5rem;
+        align-items: center;
         background-color: transparentize($light-blue, 0.8);
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+        p {
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: $cool-gray;
+          cursor: pointer;
+          &:hover {
+            color: $purplish-blue;
+            text-decoration: underline;
+          }
+        }
       }
       h4 {
         margin-left: auto;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $marine-blue;
+      }
+    }
+    &--addOn {
+      padding: 0 1.5rem 1.5rem 1.5rem;
+      background-color: transparentize($light-blue, 0.8);
+      &::before {
+        content: '';
+        width: 117rem;
+        background-color: transparentize($cool-gray, 0.6);
+        height: 0.1rem;
+        display: block;
+        margin: 0 auto 1rem auto;
+      }
+      &-item {
+        display: flex;
+        margin-bottom: 0.75rem;
+        h4 {
+          font-size: 1.2rem;
+          font-weight: 400;
+        }
+        p {
+          font-size: 1.5rem;
+          color: $cool-gray;
+        }
+      }
+    }
+    &--total {
+      display: flex;
+      margin-top: 3rem;
+      padding: 0 1.5rem 0 1.5rem;
+      p {
+        color: $cool-gray;
+        font-size: 1.5rem;
+      }
+      h3 {
+        margin-left: auto;
+        font-size: 1.8rem;
+        color: $purplish-blue;
       }
     }
   }
