@@ -49,7 +49,6 @@ export default function App() {
     const { name, type, checked } = e.target;
     let { value } = e.target;
     value = type === 'checkbox' ? checked : value;
-    console.log(name);
     if (name === 'phone') {
       value = value.replace(/\D/g, '');
     }
@@ -78,7 +77,6 @@ export default function App() {
         },
       }));
     }
-    console.log(formData);
   };
 
   const [curStep, setCurStep] = React.useState(1);
