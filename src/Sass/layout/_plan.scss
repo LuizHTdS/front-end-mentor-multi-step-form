@@ -3,6 +3,8 @@
 .selectPlan {
   margin-top: 5.5rem;
   width: 120rem;
+
+  @include mobileCardStyling;
   &__heading {
     margin-bottom: 6rem;
 

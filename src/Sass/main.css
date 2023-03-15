@@ -235,6 +235,18 @@ form {
   /* Hide default HTML checkbox */
   /* The slider */
 }
+@media screen and (max-width: 480px) {
+  .selectPlan {
+    margin: 0 4rem 0 2rem;
+    padding: 3rem 2rem 2rem 2rem;
+    background-color: white;
+    position: absolute;
+    top: -12.5rem;
+    left: -1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 12px 20px -6px rgba(0, 0, 0, 0.14);
+  }
+}
 .selectPlan__heading {
   margin-bottom: 6rem;
 }
