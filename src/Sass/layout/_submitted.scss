@@ -6,17 +6,23 @@
   height: 90vh;
   width: 120rem;
 
+  @include mobileCardStyling;
+  @include mobile {
+    height: 50vh;
+  }
   &__container {
     img {
-      margin: auto;
+      margin: 0 auto;
     }
     h1 {
       font-size: 3.2rem;
       margin: 2rem auto 0 auto;
       display: flex;
       justify-content: center;
+      color: lighten($marine-blue, 10);
     }
     p {
+      text-align: center;
       margin-top: 2rem;
       color: $cool-gray;
       font-size: 1.8rem;

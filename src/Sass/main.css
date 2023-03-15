@@ -610,16 +610,35 @@ form {
   height: 90vh;
   width: 120rem;
 }
+@media screen and (max-width: 480px) {
+  .submitted {
+    width: 41rem;
+    margin: 0 4rem 0 2rem;
+    padding: 3rem 2rem 2rem 2rem;
+    background-color: white;
+    position: absolute;
+    top: -12.5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 12px 20px -6px rgba(0, 0, 0, 0.14);
+  }
+}
+@media screen and (max-width: 480px) {
+  .submitted {
+    height: 50vh;
+  }
+}
 .submitted__container img {
-  margin: auto;
+  margin: 0 auto;
 }
 .submitted__container h1 {
   font-size: 3.2rem;
   margin: 2rem auto 0 auto;
   display: flex;
   justify-content: center;
+  color: #03418c;
 }
 .submitted__container p {
+  text-align: center;
   margin-top: 2rem;
   color: hsl(231, 11%, 63%);
   font-size: 1.8rem;
