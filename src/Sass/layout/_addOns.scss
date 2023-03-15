@@ -4,12 +4,17 @@
   margin-top: 5.5rem;
   width: 120rem;
 
+  @include mobileCardStyling;
   &__heading {
     margin-bottom: 3rem;
+    @include mobileHeadingStyling;
   }
   h1 {
     font-size: 3.6rem;
     color: lighten($marine-blue, $amount: 7%);
+    @include mobile {
+      font-size: 2.8rem;
+    }
   }
 
   h2 {
@@ -25,7 +30,7 @@
       border: 0.1rem solid $purplish-blue;
       border-radius: 1rem;
       margin-bottom: 2rem;
-
+      border-color: $cool-gray;
       h3 {
         font-size: 1.6rem;
         color: $marine-blue;
@@ -38,7 +43,7 @@
 
       input {
         margin-right: 2rem;
-        accent-color: $marine-blue;
+        accent-color: $purplish-blue;
         width: 1.8rem;
         height: 1.8rem;
       }
@@ -56,4 +61,5 @@
 
 .addOns_services--addOn.selected {
   background-color: transparentize($pastel-blue, 0.9);
+  border-color: $purplish-blue;
 }

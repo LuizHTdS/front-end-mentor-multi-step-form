@@ -406,12 +406,39 @@ form {
   margin-top: 5.5rem;
   width: 120rem;
 }
+@media screen and (max-width: 480px) {
+  .addOns {
+    width: 41rem;
+    margin: 0 4rem 0 2rem;
+    padding: 3rem 2rem 2rem 2rem;
+    background-color: white;
+    position: absolute;
+    top: -12.5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 12px 20px -6px rgba(0, 0, 0, 0.14);
+  }
+}
 .addOns__heading {
   margin-bottom: 3rem;
+}
+@media screen and (max-width: 480px) {
+  .addOns__heading h1 {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .addOns__heading h2 {
+    font-size: 2rem;
+  }
 }
 .addOns h1 {
   font-size: 3.6rem;
   color: #033a7d;
+}
+@media screen and (max-width: 480px) {
+  .addOns h1 {
+    font-size: 2.8rem;
+  }
 }
 .addOns h2 {
   color: hsl(231, 11%, 63%);
@@ -424,6 +451,7 @@ form {
   border: 0.1rem solid hsl(243, 100%, 62%);
   border-radius: 1rem;
   margin-bottom: 2rem;
+  border-color: hsl(231, 11%, 63%);
 }
 .addOns_services--addOn h3 {
   font-size: 1.6rem;
@@ -435,7 +463,7 @@ form {
 }
 .addOns_services--addOn input {
   margin-right: 2rem;
-  accent-color: hsl(213, 96%, 18%);
+  accent-color: hsl(243, 100%, 62%);
   width: 1.8rem;
   height: 1.8rem;
 }
@@ -449,6 +477,7 @@ form {
 
 .addOns_services--addOn.selected {
   background-color: rgba(173, 190, 255, 0.1);
+  border-color: hsl(243, 100%, 62%);
 }
 
 .summary {
