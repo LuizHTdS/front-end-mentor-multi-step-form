@@ -19,7 +19,7 @@ export const SelectPlan = (props: FormProps) => {
     <section className='selectPlan'>
       <div className='selectPlan__heading'>
         <h1>Select your plan</h1>
-        <h2>You have the option of monthly or yearly billing</h2>
+        <h2>You have the option of monthly or yearly billing.</h2>
       </div>
       <div className='selectPlan__billing'>{planCardEl}</div>
       <div className='selectPlan__frequency'>

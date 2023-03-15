@@ -7,7 +7,7 @@ const Submitted = () => {
         <p>
           Thanks for confirming your subscription! We hope you have fun using
           our platform. If you ever need suport, please feel free to email us at
-          support@loremgaming.com
+          support@loremgaming.com.
         </p>
       </div>
     </div>

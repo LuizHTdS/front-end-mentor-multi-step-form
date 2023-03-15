@@ -9,7 +9,7 @@ export const PersonalInfo = (props: FormProps) => {
     <section className='personalInfo'>
       <div className='personalInfo__heading'>
         <h1>Personal Info</h1>
-        <h2>Please provide your name, email address and phone number</h2>
+        <h2>Please provide your name, email address and phone number.</h2>
       </div>
       <div className='personalInfo__form'>
         <div className='personalInfo__form--inputBox'>
