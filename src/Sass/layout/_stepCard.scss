@@ -8,6 +8,22 @@
   width: 42rem;
   padding: 5rem 3rem;
   margin-right: 10rem;
+
+  @include mobile {
+    background-image: url('./images/bg-sidebar-mobile.svg');
+    display: flex;
+    width: 48rem;
+    height: 25rem;
+    margin: 0;
+    background-size: 48rem;
+    justify-content: space-around;
+  }
+  &__container {
+    @include mobile {
+      display: flex;
+      margin-bottom: 7rem;
+    }
+  }
   &__step {
     display: flex;
     align-items: center;
@@ -21,9 +37,17 @@
       margin-right: 2rem;
       font-size: 1.2rem;
       padding: 1rem 1.8rem;
+
+      @include mobile {
+        padding: 0.75rem 1.55rem;
+        margin-right: 2rem;
+      }
     }
     &--action {
       font-size: 1.8rem;
+      @include mobile {
+        display: none;
+      }
       &-step {
         font-size: 1.5rem;
         display: block;
@@ -44,6 +68,11 @@
 form {
   margin: 1rem 0 1rem 1.5rem;
   display: flex;
+
+  @include mobile {
+    display: block;
+    margin: 0;
+  }
 }
 
 .formInfo {

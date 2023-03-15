@@ -19,5 +19,9 @@ export const CurrentStepCard: React.FC<Props> = (props) => {
     }
   );
 
-  return <aside className='curStepCard'>{stepElemets}</aside>;
+  return (
+    <aside className='curStepCard'>
+      <div className='curStepCard__container'>{stepElemets}</div>
+    </aside>
+  );
 };

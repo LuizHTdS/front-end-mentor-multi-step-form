@@ -86,6 +86,23 @@ html {
   padding: 5rem 3rem;
   margin-right: 10rem;
 }
+@media screen and (max-width: 480px) {
+  .curStepCard {
+    background-image: url("./images/bg-sidebar-mobile.svg");
+    display: flex;
+    width: 48rem;
+    height: 25rem;
+    margin: 0;
+    background-size: 48rem;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 480px) {
+  .curStepCard__container {
+    display: flex;
+    margin-bottom: 7rem;
+  }
+}
 .curStepCard__step {
   display: flex;
   align-items: center;
@@ -101,8 +118,19 @@ html {
   font-size: 1.2rem;
   padding: 1rem 1.8rem;
 }
+@media screen and (max-width: 480px) {
+  .curStepCard__step--number {
+    padding: 0.75rem 1.55rem;
+    margin-right: 2rem;
+  }
+}
 .curStepCard__step--action {
   font-size: 1.8rem;
+}
+@media screen and (max-width: 480px) {
+  .curStepCard__step--action {
+    display: none;
+  }
 }
 .curStepCard__step--action-step {
   font-size: 1.5rem;
@@ -121,6 +149,12 @@ html {
 form {
   margin: 1rem 0 1rem 1.5rem;
   display: flex;
+}
+@media screen and (max-width: 480px) {
+  form {
+    display: block;
+    margin: 0;
+  }
 }
 
 .formInfo {
