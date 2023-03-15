@@ -17,7 +17,7 @@
     font-weight: 500;
     cursor: pointer;
     @include mobile {
-      padding: 0.875rem 1.75rem;
+      padding: 1rem 2rem;
       margin-right: 5rem;
     }
   }
@@ -32,6 +32,10 @@
   color: white;
   background-color: $marine-blue;
   margin-left: auto;
+
+  @include mobile {
+    background-color: $purplish-blue;
+  }
 }
 
 .btn__back {

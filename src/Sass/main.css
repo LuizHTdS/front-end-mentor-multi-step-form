@@ -647,7 +647,7 @@ form {
 }
 @media screen and (max-width: 480px) {
   .buttonField button {
-    padding: 0.875rem 1.75rem;
+    padding: 1rem 2rem;
     margin-right: 5rem;
   }
 }
@@ -662,6 +662,11 @@ form {
   color: white;
   background-color: hsl(213, 96%, 18%);
   margin-left: auto;
+}
+@media screen and (max-width: 480px) {
+  .btn__submit {
+    background-color: hsl(243, 100%, 62%);
+  }
 }
 
 .btn__back {
