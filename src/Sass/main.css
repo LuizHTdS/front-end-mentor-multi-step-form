@@ -391,6 +391,29 @@ form {
   color: hsl(243, 100%, 62%);
 }
 
+.submitted {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 90vh;
+  width: 120rem;
+}
+.submitted__container img {
+  margin: auto;
+}
+.submitted__container h1 {
+  font-size: 3.2rem;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.submitted__container p {
+  margin-top: 2rem;
+  color: hsl(231, 11%, 63%);
+  font-size: 1.8rem;
+  max-width: 80rem;
+}
+
 .buttonField {
   display: flex;
   flex-basis: 100%;
