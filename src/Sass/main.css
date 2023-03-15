@@ -225,6 +225,7 @@ form {
 @media screen and (max-width: 480px) {
   .personalInfo__form--inputBox input {
     width: 38rem;
+    font-weight: 500;
   }
 }
 
