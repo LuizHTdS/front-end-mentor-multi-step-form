@@ -144,6 +144,7 @@ html {
   background-color: hsl(206, 94%, 87%);
   border: 0.2 solid;
   border-color: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%);
 }
 
 form {
@@ -162,9 +163,20 @@ form {
   display: flex;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 480px) {
+  .formInfo {
+    width: 48rem;
+  }
+}
 
 .personalInfo {
   margin-top: 5.5rem;
+}
+@media screen and (max-width: 480px) {
+  .personalInfo {
+    margin-top: 0;
+    background-color: red;
+  }
 }
 .personalInfo__heading {
   margin-bottom: 3rem;
@@ -460,6 +472,12 @@ form {
   font-size: 1.75rem;
   font-weight: 500;
   cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .buttonField button {
+    padding: 0.875rem 1.75rem;
+    margin-right: 5rem;
+  }
 }
 
 .btn__forward {

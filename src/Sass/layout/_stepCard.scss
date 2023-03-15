@@ -63,6 +63,7 @@
   background-color: $light-blue;
   border: 0.2 solid;
   border-color: $light-blue;
+  color: $marine-blue;
 }
 
 form {
@@ -79,4 +80,8 @@ form {
   width: 120rem;
   display: flex;
   flex-wrap: wrap;
+
+  @include mobile {
+    width: 48rem;
+  }
 }

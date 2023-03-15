@@ -3,6 +3,10 @@
 .personalInfo {
   margin-top: 5.5rem;
 
+  @include mobile {
+    margin-top: 0;
+    background-color: red;
+  }
   &__heading {
     margin-bottom: 3rem;
   }
