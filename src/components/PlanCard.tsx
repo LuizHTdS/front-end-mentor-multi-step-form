@@ -33,7 +33,7 @@ export const PlanCard = (props: CardProps) => {
       }}
     >
       <img
-        src={`../images/icon-${props.plan}.svg`}
+        src={`images/icon-${props.plan}.svg`}
         alt={`icon for the ${props.plan} plan`}
       />
       <div className='textContainer'>
