@@ -2,12 +2,18 @@
 .summary {
   margin-top: 5.5rem;
   width: 120rem;
+  @include mobileCardStyling;
   &__heading {
     margin-bottom: 3rem;
+    @include mobileHeadingStyling;
   }
   h1 {
     font-size: 3.6rem;
-    color: lighten($marine-blue, $amount: 7%);
+    color: $marine-blue;
+
+    @include mobile {
+      font-size: 2.8rem;
+    }
   }
 
   h2 {
@@ -21,10 +27,15 @@
         display: flex;
         padding: 1.5rem;
         align-items: center;
-        background-color: transparentize($light-blue, 0.8);
+        background-color: transparentize($pastel-blue, 0.9);
         h3 {
           font-size: 1.8rem;
           font-weight: 500;
+
+          @include mobile {
+            font-size: 1.5rem;
+            color: $marine-blue;
+          }
         }
         p {
           font-size: 1.2rem;
@@ -46,7 +57,7 @@
     }
     &--addOn {
       padding: 0 1.5rem 1.5rem 1.5rem;
-      background-color: transparentize($light-blue, 0.8);
+      background-color: transparentize($pastel-blue, 0.9);
       &::before {
         content: '';
         width: 117rem;
@@ -54,6 +65,9 @@
         height: 0.1rem;
         display: block;
         margin: 0 auto 1rem auto;
+        @include mobile {
+          width: 34rem;
+        }
       }
       &-item {
         display: flex;
@@ -61,6 +75,9 @@
         h4 {
           font-size: 1.2rem;
           font-weight: 400;
+          @include mobile {
+            font-size: 1.5rem;
+          }
         }
         p {
           font-size: 1.5rem;
