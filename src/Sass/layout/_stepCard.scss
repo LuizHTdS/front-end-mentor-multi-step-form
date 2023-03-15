@@ -73,7 +73,7 @@ form {
   @include mobile {
     display: block;
     margin: 0;
-    background-color: $light-blue;
+    background-color: transparentize($light-blue, $amount: 0.7);
   }
 }
 

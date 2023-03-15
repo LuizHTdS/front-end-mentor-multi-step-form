@@ -155,7 +155,7 @@ form {
   form {
     display: block;
     margin: 0;
-    background-color: hsl(206, 94%, 87%);
+    background-color: rgba(191, 226, 253, 0.3);
   }
 }
 
@@ -489,10 +489,16 @@ form {
   flex-basis: 100%;
   align-self: flex-end;
 }
+@media screen and (max-width: 480px) {
+  .buttonField {
+    background-color: white;
+    padding: 3rem 1rem;
+  }
+}
 .buttonField button {
   border: none;
   padding: 1.75rem 3.5rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   font-size: 1.75rem;
   font-weight: 500;
   cursor: pointer;
