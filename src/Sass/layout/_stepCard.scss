@@ -1,7 +1,7 @@
 @use '../abstracts' as *;
 
 .curStepCard {
-  background-image: url('./public/images/bg-sidebar-desktop.svg');
+  background-image: url('images/bg-sidebar-desktop.svg');
   background-repeat: no-repeat;
   background-size: 42rem;
   height: 98vh;
@@ -10,7 +10,7 @@
   margin-right: 10rem;
 
   @include mobile {
-    background-image: url('./images/bg-sidebar-mobile.svg');
+    background-image: url('images/bg-sidebar-mobile.svg');
     display: flex;
     width: 48rem;
     height: 25rem;
