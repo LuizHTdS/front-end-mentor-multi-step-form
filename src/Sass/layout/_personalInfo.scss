@@ -4,8 +4,14 @@
   margin-top: 5.5rem;
 
   @include mobile {
-    margin-top: 0;
-    background-color: red;
+    margin: 0 4rem 0 2rem;
+    padding: 3rem 2rem 2rem 2rem;
+    background-color: white;
+    position: absolute;
+    top: -12.5rem;
+    left: -1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 12px 20px -6px rgba(0, 0, 0, 0.14);
   }
   &__heading {
     margin-bottom: 3rem;
@@ -13,11 +19,19 @@
   h1 {
     font-size: 3.6rem;
     color: lighten($marine-blue, $amount: 7%);
+
+    @include mobile {
+      font-size: 2.6rem;
+    }
   }
 
   h2 {
     color: $cool-gray;
     font-weight: 400;
+
+    @include mobile {
+      font-size: 2rem;
+    }
   }
 
   &__form--inputBox {
@@ -34,6 +48,10 @@
       border: 0.1rem solid $cool-gray;
       border-radius: 0.5rem;
       margin-bottom: 2.5rem;
+
+      @include mobile {
+        width: 38rem;
+      }
     }
   }
 }

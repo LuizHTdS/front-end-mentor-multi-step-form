@@ -155,6 +155,7 @@ form {
   form {
     display: block;
     margin: 0;
+    background-color: hsl(206, 94%, 87%);
   }
 }
 
@@ -166,6 +167,8 @@ form {
 @media screen and (max-width: 480px) {
   .formInfo {
     width: 48rem;
+    height: 64.3rem;
+    position: relative;
   }
 }
 
@@ -174,8 +177,14 @@ form {
 }
 @media screen and (max-width: 480px) {
   .personalInfo {
-    margin-top: 0;
-    background-color: red;
+    margin: 0 4rem 0 2rem;
+    padding: 3rem 2rem 2rem 2rem;
+    background-color: white;
+    position: absolute;
+    top: -12.5rem;
+    left: -1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 12px 20px -6px rgba(0, 0, 0, 0.14);
   }
 }
 .personalInfo__heading {
@@ -185,9 +194,19 @@ form {
   font-size: 3.6rem;
   color: #033a7d;
 }
+@media screen and (max-width: 480px) {
+  .personalInfo h1 {
+    font-size: 2.6rem;
+  }
+}
 .personalInfo h2 {
   color: hsl(231, 11%, 63%);
   font-weight: 400;
+}
+@media screen and (max-width: 480px) {
+  .personalInfo h2 {
+    font-size: 2rem;
+  }
 }
 .personalInfo__form--inputBox label {
   font-size: 1.3rem;
@@ -202,6 +221,11 @@ form {
   border: 0.1rem solid hsl(231, 11%, 63%);
   border-radius: 0.5rem;
   margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 480px) {
+  .personalInfo__form--inputBox input {
+    width: 38rem;
+  }
 }
 
 .selectPlan {

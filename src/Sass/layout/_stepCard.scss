@@ -73,6 +73,7 @@ form {
   @include mobile {
     display: block;
     margin: 0;
+    background-color: $light-blue;
   }
 }
 
@@ -83,5 +84,7 @@ form {
 
   @include mobile {
     width: 48rem;
+    height: 64.3rem;
+    position: relative;
   }
 }
