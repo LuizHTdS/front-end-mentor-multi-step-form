@@ -36,10 +36,12 @@ export const PlanCard = (props: CardProps) => {
         src={`../images/icon-${props.plan}.svg`}
         alt={`icon for the ${props.plan} plan`}
       />
-      <h3>{capitalizedPlan}</h3>
-      <h4>
-        ${price}/{props.formData.plan.isYearly ? 'yr' : 'mo'}
-      </h4>
+      <div className='textContainer'>
+        <h3>{capitalizedPlan}</h3>
+        <h4>
+          ${price}/{props.formData.plan.isYearly ? 'yr' : 'mo'}
+        </h4>
+      </div>
     </div>
   );
 };
